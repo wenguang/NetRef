@@ -1,6 +1,6 @@
 //
 //  ASIHTTPEngine.m
-//  LeFeng
+//  NetRef
 //
 //  Created by wenguang pan on 2017/3/11.
 //  Copyright © 2017年 VIP. All rights reserved.
@@ -15,12 +15,12 @@
 #import "HttpResponse.h"
 #import "JsonParser.h"
 
-#define ASIHTTPREQUEST_ENGINE_REQUESTKEY @"VS_ASIHTTPREQUEST_ENGINE_REQUESTKEY"
-#define ASIHTTPREQUEST_DID_RECEIVED_DATA_LENGTH @"VS_ASIHTTPREQUEST_DID_RECEIVED_DATA_LENGTH"
+#define ASIHTTPREQUEST_ENGINE_REQUESTKEY @"ASIHTTPREQUEST_ENGINE_REQUESTKEY"
+#define ASIHTTPREQUEST_DID_RECEIVED_DATA_LENGTH @"ASIHTTPREQUEST_DID_RECEIVED_DATA_LENGTH"
 
 @interface ASIHTTPEngine()
 {
-    NSMutableDictionary         *_httpRequestsDic;  // key is VSDRequest's requestId, value is ASIHttpRequest.
+    NSMutableDictionary         *_httpRequestsDic;  // key is HTTPRequest's requestId, value is ASIHttpRequest.
     
     // about download
     ASINetworkQueue             *_downloadNetworkQueue;     // 下载队列.

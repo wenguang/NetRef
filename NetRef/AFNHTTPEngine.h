@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HTTPEngine.h"
 
-@interface AFNHTTPEngine : NSObject
+/**
+ * 基于AFN的实现
+ */
+@interface AFNHTTPEngine : HTTPEngine
 
 @end

@@ -1,6 +1,6 @@
 //
 //  HttpRequest.m
-//  LeFeng
+//  NetRef
 //
 //  Created by wenguang pan on 2017/3/12.
 //  Copyright © 2017年 VIP. All rights reserved.
@@ -50,6 +50,7 @@ static NSUInteger HTTP_REQUEST_ID = 0;         // 标识一个唯一的请求，
 
 - (void)buildRequestHeaders
 {
+    [self.requestHeaders removeAllObjects];
     NSString *signAuthorizationKey = [APISign authKey];
     NSString *signAuthorizationValue = [APISign signValueWithParamters:[self parameters]];
     [self addRequestHeaderWithKey:signAuthorizationKey value:signAuthorizationValue];
